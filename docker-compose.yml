@@ -3,6 +3,7 @@ services:
   rctf:
     # image: redpwn/rctf:${RCTF_GIT_REF}
     build:
+      context: .
       dockerfile: Dockerfile
     restart: always
     ports:

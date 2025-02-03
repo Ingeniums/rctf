@@ -15,6 +15,7 @@ const markdownComponents = {
 const solvesPageSize = 10
 
 const Problem = ({ classes, problem, solved, setSolved }) => {
+  
   const { toast } = useToast()
 
   const hasDownloads = problem.files.length !== 0
@@ -85,7 +86,11 @@ const Problem = ({ classes, problem, solved, setSolved }) => {
       <div class='frame__body'>
         <div class='row u-no-padding'>
           <div class='col-6 u-no-padding'>
-            <div class='frame__title title'>{problem.category}/{problem.name}</div>
+            <div class='frame__title title'>
+              {problem.category}/
+              {problem.name}
+              <div class={`badge ${classes.badge}`} >{problem.difficulty}</div>
+              </div>
             <div class='frame__subtitle u-no-margin'>{problem.author}</div>
           </div>
           <div class='col-6 u-no-padding u-text-right'>
@@ -189,6 +194,17 @@ export default withStyles({
     opacity: '0.6',
     pointerEvents: 'none',
     cursor: 'default'
+  },
+  badge: {
+      backgroundColor: '#616161',
+      color: '#eeeeee', 
+      fontSize: '0.68rem',
+      fontWeight: 700,
+      marginLeft: '0.5rem', 
+      padding: '0.125rem 0.5rem', 
+      borderRadius: '0.25rem', 
+      border: '1px solid #6a7282', 
+      display:'inline-block'
   },
   tag: {
     background: '#111'

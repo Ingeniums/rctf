@@ -16,6 +16,7 @@ export interface CleanedChallenge {
   description: string;
   category: string;
   author: string;
+  difficulty : string;
   files: File[];
   points: Points;
   sortWeight?: number;
@@ -33,6 +34,7 @@ export interface Challenge {
   name: string;
   description: string;
   category: string;
+  difficulty : string;
   author: string;
   files: File[];
   points: Points;
