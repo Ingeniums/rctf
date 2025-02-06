@@ -11,6 +11,7 @@ import Home from './routes/home'
 import Register from './routes/register'
 import Login from './routes/login'
 import Profile from './routes/profile'
+import Auth from './routes/auth'
 import Challenges from './routes/challs'
 import Scoreboard from './routes/scoreboard'
 import Recover from './routes/recover'
@@ -47,7 +48,8 @@ function App ({ classes }) {
   const loggedInPaths = [
     <Profile key='profile' path='/profile' name='Profile' />,
     <Challenges key='challs' path='/challs' name='Challenges' />,
-    <AdminChallenges key='adminChalls' path='/admin/challs' />
+    <AdminChallenges key='adminChalls' path='/admin/challs' />,
+    <Auth key='auth' path='/auth' name='Auth' />
   ]
 
   const allPaths = [
