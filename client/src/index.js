@@ -49,7 +49,7 @@ function App ({ classes }) {
     <Profile key='profile' path='/profile' name='Profile' />,
     <Challenges key='challs' path='/challs' name='Challenges' />,
     <AdminChallenges key='adminChalls' path='/admin/challs' />,
-    <Auth key='auth' path='/auth' name='Auth' />
+    <Auth key='auth' path='/auth' />
   ]
 
   const allPaths = [
